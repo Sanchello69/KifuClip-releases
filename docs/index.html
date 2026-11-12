@@ -30,7 +30,7 @@
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{display:flex;flex-direction:column;background:#fff;border:1px solid #e9e3dd;border-radius:20px;padding:25px;min-height:245px;box-shadow:0 7px 24px #33201908}
     .icon{display:grid;place-items:center;width:49px;height:49px;border-radius:14px;background:#f7ebeb;color:#ad2330;margin-bottom:20px}.icon svg{width:26px;height:26px;fill:currentColor}
     .card h3{font-size:21px;margin:0 0 8px;letter-spacing:-.035em}.card p{color:#6b6870;font-size:14px;margin:0 0 18px}.action{display:inline-flex;align-items:center;justify-content:center;min-height:42px;margin-top:auto;padding:10px 15px;border-radius:11px;background:#b92332;color:#fff;text-decoration:none;font-weight:750;font-size:14px;text-align:center}.action:hover,.action:focus-visible{background:#971b27}.action.disabled{background:#f0eeeb;color:#858189;cursor:default}
-    .notice{font-size:13px;color:#77737a;margin:17px 0 0}.notes{background:#fff;border:1px solid #e9e3dd;border-radius:20px;padding:26px 29px;min-height:110px}.notes p{margin:0;white-space:pre-line;color:#45434a}.more{display:inline-flex;margin-top:18px;color:#a81f2c;font-weight:750;text-decoration:none}.more:hover{text-decoration:underline}
+    .notice{font-size:13px;color:#77737a;margin:17px 0 0}.notes{background:#fff;border:1px solid #e9e3dd;border-radius:20px;padding:26px 29px;min-height:110px;color:#45434a}.notes p{margin:0 0 18px}.notes p:last-child,.notes ul:last-child{margin-bottom:0}.notes h3{font-size:18px;margin:24px 0 12px}.notes ul{margin:0 0 18px;padding-left:22px;line-height:1.6}.notes li+li{margin-top:5px}.more{display:inline-flex;margin-top:18px;color:#a81f2c;font-weight:750;text-decoration:none}.more:hover{text-decoration:underline}
     footer{border-top:1px solid #e7e1d9;padding:30px 0 46px;color:#77737a;font-size:13px}footer .wrap{display:flex;justify-content:space-between;gap:20px}footer a{text-decoration:none;color:#a81f2c}
     @media(max-width:800px){.hero{padding:58px 0 50px;grid-template-columns:1fr}.hero-art{display:none}.cards{grid-template-columns:1fr}.card{min-height:205px}.release-band{align-items:flex-start;flex-direction:column}nav{gap:13px;font-size:13px}}
     @media(max-width:480px){.wrap{width:min(100% - 32px,1120px)}.top{min-height:68px}nav a:first-child{display:none}.release-band,.notes{padding:21px}.card{padding:21px}footer .wrap{flex-direction:column}}
@@ -40,24 +40,74 @@
   <header><div class="wrap top"><a class="brand" href="#top" aria-label="KifuClip — наверх"><span class="mark" aria-hidden="true"></span>KifuClip</a><nav aria-label="Навигация"><a href="#downloads">Скачать</a><a href="#changes">Изменения</a><a href="#history">Все выпуски</a></nav></div></header>
   <main id="top">
     <div class="wrap hero"><div><span class="eyebrow">Go &amp; SGF Editor</span><h1>Ваши партии.<br>Ваши задачи.</h1><p class="lead">KifuClip помогает редактировать SGF-файлы и работать с задачами по го. Здесь появляются готовые выпуски для Windows и Android.</p></div><div class="hero-art" aria-hidden="true"><div class="board"></div><div class="stone dark"></div><div class="stone light"></div></div></div>
-    <section id="downloads" class="wrap"><h2>Скачать KifuClip</h2><p class="section-intro">Выберите подходящий способ установки.</p><div class="release-band"><div><strong id="release-title">Первый выпуск готовится</strong><p id="release-date">Проверенные сборки появятся здесь после публикации релиза.</p></div><span class="badge" id="release-status">Ожидается</span></div><div class="cards">
-      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 4.5 10.5 3v8H2zm9.5-1.6L22 1.4V11H11.5zM2 12h8.5v8L2 18.5zm9.5 0H22v9.6l-10.5-1.5z"/></svg></span><h3>Windows</h3><p>Установщик EXE для Windows x64 и ARM64.</p><a class="action disabled" id="windows-link" aria-disabled="true">Скоро</a></article>
-      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.2 7.7h11.6a1 1 0 0 1 1 1v8.5a1 1 0 0 1-1 1h-1.3V21a1 1 0 0 1-2 0v-2.8h-5V21a1 1 0 0 1-2 0v-2.8H6.2a1 1 0 0 1-1-1V8.7a1 1 0 0 1 1-1m-3 1a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1m17.6 0a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1M6 6.8a6.3 6.3 0 0 1 2.3-3.6L7.2 1.4l.8-.5 1.2 1.8a7.3 7.3 0 0 1 5.6 0L16 .9l.8.5-1.1 1.8A6.3 6.3 0 0 1 18 6.8zm3.2-2.2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6m5.6 0a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6"/></svg></span><h3>Android</h3><p>Подписанный APK для установки вручную.</p><a class="action disabled" id="android-link" aria-disabled="true">Скоро</a></article>
+    <section id="downloads" class="wrap"><h2>Скачать KifuClip</h2><p class="section-intro">Выберите подходящий способ установки.</p><div class="release-band"><div><strong id="release-title">KifuClip 1.0.0</strong><p id="release-date">Опубликован 13 ноября 2026 г.</p></div><span class="badge" id="release-status">v1.0.0</span></div><div class="cards">
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 4.5 10.5 3v8H2zm9.5-1.6L22 1.4V11H11.5zM2 12h8.5v8L2 18.5zm9.5 0H22v9.6l-10.5-1.5z"/></svg></span><h3>Windows</h3><p>Установщик EXE для Windows x64 и ARM64.</p><a class="action" id="windows-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.0/KifuClip.1.0.0.exe">Скачать EXE</a></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.2 7.7h11.6a1 1 0 0 1 1 1v8.5a1 1 0 0 1-1 1h-1.3V21a1 1 0 0 1-2 0v-2.8h-5V21a1 1 0 0 1-2 0v-2.8H6.2a1 1 0 0 1-1-1V8.7a1 1 0 0 1 1-1m-3 1a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1m17.6 0a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1M6 6.8a6.3 6.3 0 0 1 2.3-3.6L7.2 1.4l.8-.5 1.2 1.8a7.3 7.3 0 0 1 5.6 0L16 .9l.8.5-1.1 1.8A6.3 6.3 0 0 1 18 6.8zm3.2-2.2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6m5.6 0a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6"/></svg></span><h3>Android</h3><p>Подписанный APK для установки вручную.</p><a class="action" id="android-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.0/KifuClip.1.0.0.apk">Скачать APK</a></article>
       <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16l1 4H3zm0 5h16v11H4zm3 3v5h4v-5zm6 0v5h4v-5z"/></svg></span><h3>RuStore</h3><p>Установка через магазин после выхода приложения.</p><span class="action disabled" id="rustore-link">Скоро</span></article>
-    </div><p class="notice">Windows-установщик пока не подписан сертификатом издателя. Проверяйте источник загрузки и контрольную сумму в релизе.</p></section>
-    <section id="changes" class="wrap"><h2>Что изменилось</h2><p class="section-intro">Заметки к последнему опубликованному выпуску.</p><div class="notes"><p id="release-notes">История изменений появится вместе с первым выпуском.</p><a class="more" id="release-details" href="https://github.com/Sanchello69/KifuClip-releases/releases">Открыть выпуски →</a></div></section>
+    </div><p class="notice">Windows-установщик пока не подписан сертификатом издателя.</p></section>
+    <section id="changes" class="wrap"><h2>Что изменилось</h2><p class="section-intro">Заметки к последнему опубликованному выпуску.</p><div class="notes" id="release-notes"><p>KifuClip — редактор SGF-файлов для тех, кто разбирает партии и создаёт задачи по го. Доска, дерево вариантов и комментарии помогают видеть ход мысли и возвращаться к важным моментам.</p><h3>Возможности</h3><ul><li>Открывайте партии и создавайте новые позиции на досках 9×9, 13×13 и 19×19.</li><li>Изучайте варианты, добавляйте ходы, комментарии и отметки на доске.</li><li>Готовьте задачи и материалы для занятий: выбирайте позиции, экспортируйте изображения и PDF или отправляйте их на печать.</li><li>Работайте с подборками SGF: объединяйте файлы, исправляйте ошибки и удаляйте ответы, сохраняя оригиналы.</li></ul><p>Первый выпуск KifuClip доступен для Windows и Android.</p></div></section>
     <section id="history" class="wrap"><h2>Все выпуски</h2><p class="section-intro">Предыдущие версии, файлы и контрольные суммы хранятся в GitHub Releases.</p><a class="more" href="https://github.com/Sanchello69/KifuClip-releases/releases">Смотреть архив выпусков →</a></section>
   </main><footer><div class="wrap"><span>© KifuClip</span><a href="https://github.com/Sanchello69/KifuClip-releases/releases">GitHub Releases</a></div></footer>
   <script>
-    const releasesUrl = 'https://github.com/Sanchello69/KifuClip-releases/releases';
     const apiUrl = 'https://api.github.com/repos/Sanchello69/KifuClip-releases/releases/latest';
-    function enableDownload(id, asset) {
-      if (!asset) return;
+    function updateDownload(id, asset, label) {
       const link = document.getElementById(id);
+      if (!asset) {
+        link.removeAttribute('href');
+        link.textContent = 'Скоро';
+        link.classList.add('disabled');
+        link.setAttribute('aria-disabled', 'true');
+        return;
+      }
       link.href = asset.browser_download_url;
-      link.textContent = 'Скачать ' + asset.name;
+      link.textContent = 'Скачать ' + label;
       link.classList.remove('disabled');
       link.removeAttribute('aria-disabled');
+    }
+    function renderNotes(markdown) {
+      const notes = document.getElementById('release-notes');
+      notes.replaceChildren();
+      if (!markdown || !markdown.trim()) {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = 'Описание выпуска доступно на GitHub.';
+        notes.append(paragraph);
+        return;
+      }
+      let paragraph = [];
+      let list = null;
+      function flushParagraph() {
+        if (!paragraph.length) return;
+        const node = document.createElement('p');
+        node.textContent = paragraph.join(' ');
+        notes.append(node);
+        paragraph = [];
+      }
+      for (const rawLine of markdown.split(/\r?\n/)) {
+        const line = rawLine.trim();
+        if (!line) {
+          flushParagraph();
+          list = null;
+        } else if (/^#{1,6}\s+/.test(line)) {
+          flushParagraph();
+          list = null;
+          const heading = document.createElement('h3');
+          heading.textContent = line.replace(/^#{1,6}\s+/, '');
+          notes.append(heading);
+        } else if (/^[-*]\s+/.test(line)) {
+          flushParagraph();
+          if (!list) {
+            list = document.createElement('ul');
+            notes.append(list);
+          }
+          const item = document.createElement('li');
+          item.textContent = line.replace(/^[-*]\s+/, '');
+          list.append(item);
+        } else {
+          list = null;
+          paragraph.push(line);
+        }
+      }
+      flushParagraph();
     }
     fetch(apiUrl, {headers: {'Accept': 'application/vnd.github+json'}})
       .then(response => { if (!response.ok) throw new Error('release unavailable'); return response.json(); })
@@ -66,10 +116,9 @@
         document.getElementById('release-date').textContent = release.published_at ? 'Опубликован ' + new Intl.DateTimeFormat('ru-RU', {day:'numeric', month:'long', year:'numeric'}).format(new Date(release.published_at)) : 'Опубликованный выпуск';
         document.getElementById('release-status').textContent = release.tag_name;
         const assets = release.assets || [];
-        enableDownload('windows-link', assets.find(asset => /^KifuClip .*\.exe$/i.test(asset.name)));
-        enableDownload('android-link', assets.find(asset => /^KifuClip .*\.apk$/i.test(asset.name)));
-        document.getElementById('release-notes').textContent = release.body || 'Описание выпуска доступно на GitHub.';
-        document.getElementById('release-details').href = release.html_url || releasesUrl;
+        updateDownload('windows-link', assets.find(asset => /\.exe$/i.test(asset.name)), 'EXE');
+        updateDownload('android-link', assets.find(asset => /\.apk$/i.test(asset.name)), 'APK');
+        renderNotes(release.body);
       }).catch(() => {});
   </script>
 </body>
