@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#b92332">
-  <meta name="description" content="KifuClip — редактор SGF и задач по го. Официальная страница выпусков для Windows и Android.">
-  <title>KifuClip — выпуски и загрузки</title>
+  <meta name="description" content="Скачайте KifuClip — редактор SGF для Windows и Android. Разбирайте партии в го, редактируйте варианты ходов и создавайте задачи.">
+  <link rel="canonical" href="https://sanchello69.github.io/KifuClip-releases/">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="76x76">
+  <title>KifuClip — скачать редактор SGF для Windows и Android</title>
   <style>
     :root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202127;background:#f8f6f2;font-synthesis:none}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}button{font:inherit}
@@ -18,8 +20,8 @@
     .mark:before{background:#18191d;left:8px;top:9px}.mark:after{background:#fffdfa;right:7px;bottom:8px}
     nav{display:flex;gap:26px;font-size:14px;font-weight:650}nav a{text-decoration:none;color:#5a5860}nav a:hover,nav a:focus-visible{color:#b92332}
     .hero{padding:86px 0 74px;display:grid;grid-template-columns:1.4fr .6fr;align-items:center;gap:30px}
-    .eyebrow{color:#aa2531;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
     h1{font-size:clamp(55px,8vw,104px);letter-spacing:-.075em;line-height:.98;margin:19px 0 22px}
+    h1 span{display:block;font-size:clamp(24px,4.5vw,45px);letter-spacing:-.045em;line-height:1.15;margin-top:12px}
     .lead{font-size:clamp(18px,2.2vw,22px);line-height:1.55;color:#51515b;max-width:650px;margin:0}
     .hero-art{height:260px;position:relative;display:grid;place-items:center}
     .board{width:210px;height:210px;border:1px solid #dfd4c7;background:repeating-linear-gradient(0deg,transparent 0 25px,#e9dcd0 26px 27px),repeating-linear-gradient(90deg,transparent 0 25px,#e9dcd0 26px 27px);transform:rotate(-12deg);border-radius:12px;opacity:.9}
@@ -39,8 +41,9 @@
 <body>
   <header><div class="wrap top"><a class="brand" href="#top" aria-label="KifuClip — наверх"><span class="mark" aria-hidden="true"></span>KifuClip</a><nav aria-label="Навигация"><a href="#downloads">Скачать</a><a href="#changes">Изменения</a><a href="#history">Все выпуски</a></nav></div></header>
   <main id="top">
-    <div class="wrap hero"><div><span class="eyebrow">Go &amp; SGF Editor</span><h1>Ваши партии.<br>Ваши задачи.</h1><p class="lead">KifuClip помогает редактировать SGF-файлы и работать с задачами по го. Здесь появляются готовые выпуски для Windows и Android.</p></div><div class="hero-art" aria-hidden="true"><div class="board"></div><div class="stone dark"></div><div class="stone light"></div></div></div>
-    <section id="downloads" class="wrap"><h2>Скачать KifuClip</h2><p class="section-intro">Выберите подходящий способ установки.</p><div class="release-band"><div><strong id="release-title">KifuClip 1.0.0</strong><p id="release-date">Опубликован 13 ноября 2026 г.</p></div><span class="badge" id="release-status">v1.0.0</span></div><div class="cards">
+    <div class="wrap hero"><div><h1>KifuClip <span>Редактор SGF для го</span></h1><p class="lead">Разбирайте партии, редактируйте варианты ходов и создавайте задачи по го. Установите KifuClip на Windows или Android.</p></div><div class="hero-art" aria-hidden="true"><div class="board"></div><div class="stone dark"></div><div class="stone light"></div></div></div>
+    <!-- При публикации обновите версию, дату, ссылки и заметки в HTML, чтобы выпуск был доступен без JavaScript. -->
+    <section id="downloads" class="wrap"><h2>Скачать KifuClip</h2><p class="section-intro">Выберите подходящий способ установки.</p><div class="release-band" data-release-updated-at="2026-11-12T22:31:11Z"><div><strong id="release-title">KifuClip 1.0.0</strong><p id="release-date">Опубликован <time datetime="2026-11-12T22:31:11Z">13 ноября 2026 г.</time></p></div><span class="badge" id="release-status">v1.0.0</span></div><div class="cards">
       <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 4.5 10.5 3v8H2zm9.5-1.6L22 1.4V11H11.5zM2 12h8.5v8L2 18.5zm9.5 0H22v9.6l-10.5-1.5z"/></svg></span><h3>Windows</h3><p>Установщик EXE для Windows x64 и ARM64.</p><a class="action" id="windows-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.0/KifuClip.1.0.0.exe">Скачать EXE</a></article>
       <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.2 7.7h11.6a1 1 0 0 1 1 1v8.5a1 1 0 0 1-1 1h-1.3V21a1 1 0 0 1-2 0v-2.8h-5V21a1 1 0 0 1-2 0v-2.8H6.2a1 1 0 0 1-1-1V8.7a1 1 0 0 1 1-1m-3 1a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1m17.6 0a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1M6 6.8a6.3 6.3 0 0 1 2.3-3.6L7.2 1.4l.8-.5 1.2 1.8a7.3 7.3 0 0 1 5.6 0L16 .9l.8.5-1.1 1.8A6.3 6.3 0 0 1 18 6.8zm3.2-2.2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6m5.6 0a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6"/></svg></span><h3>Android</h3><p>Подписанный APK для установки вручную.</p><a class="action" id="android-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.0/KifuClip.1.0.0.apk">Скачать APK</a></article>
       <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16l1 4H3zm0 5h16v11H4zm3 3v5h4v-5zm6 0v5h4v-5z"/></svg></span><h3>RuStore</h3><p>Установка через магазин после выхода приложения.</p><span class="action disabled" id="rustore-link">Скоро</span></article>
@@ -109,17 +112,47 @@
       }
       flushParagraph();
     }
-    fetch(apiUrl, {headers: {'Accept': 'application/vnd.github+json'}})
-      .then(response => { if (!response.ok) throw new Error('release unavailable'); return response.json(); })
-      .then(release => {
+    async function refreshLatestRelease() {
+      try {
+        const response = await fetch(apiUrl, {headers: {'Accept': 'application/vnd.github+json'}});
+        if (!response.ok) return;
+        const release = await response.json();
+        const status = document.getElementById('release-status');
+        const releaseBand = status.closest('.release-band');
+        if (!release.tag_name || (
+          release.tag_name === status.textContent &&
+          release.updated_at === releaseBand.dataset.releaseUpdatedAt
+        )) return;
+
         document.getElementById('release-title').textContent = release.name || release.tag_name;
-        document.getElementById('release-date').textContent = release.published_at ? 'Опубликован ' + new Intl.DateTimeFormat('ru-RU', {day:'numeric', month:'long', year:'numeric'}).format(new Date(release.published_at)) : 'Опубликованный выпуск';
-        document.getElementById('release-status').textContent = release.tag_name;
+        const date = document.getElementById('release-date');
+        if (release.published_at) {
+          const time = document.createElement('time');
+          time.dateTime = release.published_at;
+          time.textContent = new Intl.DateTimeFormat('ru-RU', {
+            day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Moscow'
+          }).format(new Date(release.published_at));
+          date.replaceChildren('Опубликован ', time);
+        } else {
+          date.textContent = 'Опубликованный выпуск';
+        }
+        status.textContent = release.tag_name;
         const assets = release.assets || [];
         updateDownload('windows-link', assets.find(asset => /\.exe$/i.test(asset.name)), 'EXE');
         updateDownload('android-link', assets.find(asset => /\.apk$/i.test(asset.name)), 'APK');
         renderNotes(release.body);
-      }).catch(() => {});
+      } catch {
+        // При недоступности GitHub страница показывает опубликованный HTML.
+      }
+    }
+
+    window.addEventListener('load', () => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(refreshLatestRelease, {timeout: 2000});
+      } else {
+        setTimeout(refreshLatestRelease, 0);
+      }
+    }, {once: true});
   </script>
 </body>
 </html>
