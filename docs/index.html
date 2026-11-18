@@ -29,17 +29,32 @@
     .board{width:210px;height:210px;border:1px solid #dfd4c7;background:repeating-linear-gradient(0deg,transparent 0 25px,#e9dcd0 26px 27px),repeating-linear-gradient(90deg,transparent 0 25px,#e9dcd0 26px 27px);transform:rotate(-12deg);border-radius:12px;opacity:.9}
     .stone{position:absolute;border-radius:50%;width:106px;height:106px;box-shadow:0 14px 25px #271c2135}.stone.dark{background:radial-gradient(circle at 33% 25%,#66686b,#191a1c 65%);left:19%;top:17%}.stone.light{background:radial-gradient(circle at 30% 20%,#fff,#e2ddd6 70%);right:13%;bottom:16%}
     section{padding:36px 0 72px}h2{font-size:clamp(31px,4vw,45px);letter-spacing:-.055em;margin:0 0 10px}p{line-height:1.6}.section-intro{color:#68656b;margin:0 0 25px}
-    .release-band{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#24232a;color:#fff;padding:24px 28px;border-radius:20px;margin-bottom:18px}
+    .release-band{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 18px;background:#24232a;color:#fff;padding:14px 18px;border-radius:14px;margin-top:18px}
     .release-band strong{font-size:19px;letter-spacing:-.025em}.release-band p{margin:3px 0 0;color:#c5c0c3;font-size:14px}.badge{display:inline-flex;align-items:center;white-space:nowrap;background:#ffffff1b;border:1px solid #ffffff31;border-radius:100px;padding:8px 13px;font-size:12px;font-weight:750}
-    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{display:flex;flex-direction:column;background:#fff;border:1px solid #e9e3dd;border-radius:20px;padding:25px;min-height:245px;box-shadow:0 7px 24px #33201908}
-    .feature-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.feature-cards .card{min-height:0}.feature-cards .card p{margin-bottom:0}
-    .icon{display:grid;place-items:center;width:49px;height:49px;border-radius:14px;background:#f7ebeb;color:#ad2330;margin-bottom:20px}.icon svg{width:26px;height:26px;fill:currentColor}
-    .card h3{font-size:21px;margin:0 0 8px;letter-spacing:-.035em}.card p{color:#6b6870;font-size:14px;margin:0 0 18px}.action{display:inline-flex;align-items:center;justify-content:center;min-height:42px;margin-top:auto;padding:10px 15px;border-radius:11px;background:#b92332;color:#fff;text-decoration:none;font-weight:750;font-size:14px;text-align:center}.action:hover,.action:focus-visible{background:#971b27}.action.disabled{background:#f0eeeb;color:#858189;cursor:default}
-    .notice{font-size:13px;color:#77737a;margin:17px 0 0}.notes{background:#fff;border:1px solid #e9e3dd;border-radius:20px;padding:26px 29px;min-height:110px;color:#45434a}.notes p{margin:0 0 18px}.notes p:last-child,.notes ul:last-child{margin-bottom:0}.notes h3{font-size:18px;margin:24px 0 12px}.notes ul{margin:0 0 18px;padding-left:22px;line-height:1.6}.notes li+li{margin-top:5px}.more{display:inline-flex;margin-top:18px;color:#a81f2c;font-weight:750;text-decoration:none}.more:hover{text-decoration:underline}
+    .download-group{margin-top:24px;padding:0}.download-group+.download-group{padding-top:21px;border-top:1px solid #e7e1d9}
+    .download-group h3{margin:0;font-size:22px;letter-spacing:-.035em}
+    .download-options{display:grid;gap:10px;margin-top:12px}
+    .desktop-downloads{grid-template-columns:repeat(2,minmax(0,1fr))}.store-downloads{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .download-option{display:flex;align-items:center;gap:10px;min-width:0;padding:12px;border:1px solid #e9e3dd;border-radius:14px;background:#fff}
+    .download-option>div{min-width:0;overflow-wrap:anywhere}
+    .download-option h4{margin:0;font-size:16px;letter-spacing:-.02em}.download-option p{margin:0;color:#625e65;font-size:13px}
+    .download-apk{margin-top:12px;padding:14px;border-color:#e5c4c8}
+    .icon{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:10px;background:#f7ebeb;color:#ad2330}.icon svg{width:20px;height:20px;fill:currentColor}
+    .action{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-height:44px;margin-left:auto;padding:8px 11px;border:1px solid #e5c4c8;border-radius:9px;background:#fff;color:#a51d2a;text-decoration:none;font-weight:750;font-size:13px;text-align:center}
+    .action:hover,.action:focus-visible{background:#f7ebeb}.download-apk .action{background:#b92332;border-color:#b92332;color:#fff}.download-apk .action:hover,.download-apk .action:focus-visible{background:#971b27}
+    .action.disabled,.download-apk .action.disabled{background:#f0eeeb;border-color:#f0eeeb;color:#625e65;cursor:default}
+    .notice{font-size:13px;color:#625e65;margin:9px 0 0}
+    .feature-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{display:flex;flex-direction:column;background:#fff;border:1px solid #e9e3dd;border-radius:20px;padding:25px;box-shadow:0 7px 24px #33201908}
+    .card h3{font-size:21px;margin:0 0 8px;letter-spacing:-.035em}.card p{color:#6b6870;font-size:14px;margin:0}
+    .notes{background:#fff;border:1px solid #e9e3dd;border-radius:20px;padding:26px 29px;min-height:110px;color:#45434a}.notes p{margin:0 0 18px}.notes p:last-child,.notes ul:last-child{margin-bottom:0}.notes h3{font-size:18px;margin:24px 0 12px}.notes ul{margin:0 0 18px;padding-left:22px;line-height:1.6}.notes li+li{margin-top:5px}.more{display:inline-flex;margin-top:18px;color:#a81f2c;font-weight:750;text-decoration:none}.more:hover{text-decoration:underline}
     footer{border-top:1px solid #e7e1d9;padding:30px 0 46px;color:#77737a;font-size:13px}footer .wrap{display:flex;justify-content:space-between;gap:20px}footer a{text-decoration:none;color:#a81f2c}
-    @media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:800px){.hero{padding:58px 0 50px;grid-template-columns:1fr}.cards,.feature-cards{grid-template-columns:1fr}.hero-art{display:none}.card{min-height:205px}.release-band{align-items:flex-start;flex-direction:column}nav{gap:13px;font-size:13px}}
-    @media(max-width:480px){.wrap{width:min(100% - 32px,1120px)}.top{min-height:68px}nav a:first-child{display:none}.release-band,.notes{padding:21px}.card{padding:21px}footer .wrap{flex-direction:column}}
+    @media(max-width:800px){.hero{padding:58px 0 50px;grid-template-columns:1fr}.feature-cards{grid-template-columns:1fr}.hero-art{display:none}nav{gap:13px;font-size:13px}}
+    @media(max-width:640px) and (min-width:481px){.desktop-downloads .download-option{flex-wrap:wrap}.desktop-downloads .action{flex-basis:100%}}
+    @media(max-width:560px){.store-downloads{grid-template-columns:1fr}.store-downloads .download-option>div{display:flex;flex:1;align-items:center;justify-content:space-between;gap:10px}}
+    @media(max-width:480px){.wrap{width:min(100% - 32px,1120px)}.top{min-height:68px}nav a:first-child{display:none}.notes,.card{padding:21px}footer .wrap{flex-direction:column}
+      .desktop-downloads{grid-template-columns:1fr}.download-apk{flex-wrap:wrap}.download-apk .action{flex-basis:100%}
+    }
   </style>
 </head>
 <body>
@@ -47,12 +62,50 @@
   <main id="top">
     <div class="wrap hero"><div><h1>KifuClip <span>Редактор SGF для го</span></h1><p class="lead">Разбирайте партии, редактируйте варианты ходов и создавайте задачи по го. Установите KifuClip на Windows, macOS или Android.</p></div><div class="hero-art" aria-hidden="true"><div class="board"></div><div class="stone dark"></div><div class="stone light"></div></div></div>
     <!-- При публикации обновите версию, дату, ссылки и заметки в HTML, чтобы выпуск был доступен без JavaScript. -->
-    <section id="downloads" class="wrap"><h2>Скачать KifuClip</h2><p class="section-intro">Выберите подходящий способ установки.</p><div class="release-band" data-release-updated-at="2026-11-14T19:42:35Z"><div><strong id="release-title">KifuClip 1.0.1</strong><p id="release-date">Опубликован <time datetime="2026-11-14T15:23:52Z">14 ноября 2026 г.</time></p></div><span class="badge" id="release-status">v1.0.1</span></div><div class="cards">
-      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 4.5 10.5 3v8H2zm9.5-1.6L22 1.4V11H11.5zM2 12h8.5v8L2 18.5zm9.5 0H22v9.6l-10.5-1.5z"/></svg></span><h3>Windows</h3><p>Установщик EXE для Windows x64 и ARM64.</p><a class="action" id="windows-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.1/KifuClip.1.0.1.exe">Скачать EXE</a></article>
-      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16.7 1c.1 1.3-.4 2.6-1.2 3.5-.9 1-2.1 1.6-3.3 1.5-.2-1.2.4-2.5 1.2-3.4C14.3 1.6 15.6 1 16.7 1zM20.5 17.2c-.5 1.2-.8 1.8-1.5 2.8-1 1.4-2.3 3.1-4 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.9-1.5-3.9-2.9C1 16.3.5 10.9 2.2 8.3c1.2-1.8 3-2.8 4.8-2.8 1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.5 0 3.1.8 4.3 2.1-3.8 2.1-3.2 7.6 1.8 9.6z"/></svg></span><h3>macOS</h3><p>Установщик PKG для macOS.</p><a class="action" id="macos-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.1/KifuClip.1.0.1.pkg">Скачать PKG</a></article>
-      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.2 7.7h11.6a1 1 0 0 1 1 1v8.5a1 1 0 0 1-1 1h-1.3V21a1 1 0 0 1-2 0v-2.8h-5V21a1 1 0 0 1-2 0v-2.8H6.2a1 1 0 0 1-1-1V8.7a1 1 0 0 1 1-1m-3 1a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1m17.6 0a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1M6 6.8a6.3 6.3 0 0 1 2.3-3.6L7.2 1.4l.8-.5 1.2 1.8a7.3 7.3 0 0 1 5.6 0L16 .9l.8.5-1.1 1.8A6.3 6.3 0 0 1 18 6.8zm3.2-2.2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6m5.6 0a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6"/></svg></span><h3>Android</h3><p>Подписанный APK для установки вручную.</p><a class="action" id="android-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.1/KifuClip.1.0.1.apk">Скачать APK</a></article>
-      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16l1 4H3zm0 5h16v11H4zm3 3v5h4v-5zm6 0v5h4v-5z"/></svg></span><h3>RuStore</h3><p>Установка через магазин после выхода приложения.</p><span class="action disabled" id="rustore-link">Скоро</span></article>
-    </div><p class="notice">Установщики для Windows и macOS пока не подписаны сертификатом издателя.</p></section>
+    <section id="downloads" class="wrap" aria-labelledby="downloads-heading">
+      <h2 id="downloads-heading">Скачать KifuClip</h2>
+      <div class="release-band" data-release-updated-at="2026-11-14T19:42:35Z"><div><strong id="release-title">KifuClip 1.0.1</strong><p id="release-date">Опубликован <time datetime="2026-11-14T15:23:52Z">14 ноября 2026 г.</time></p></div><span class="badge" id="release-status">v1.0.1</span></div>
+
+      <section class="download-group" aria-labelledby="desktop-downloads-heading">
+        <h3 id="desktop-downloads-heading">Для компьютера</h3>
+        <div class="download-options desktop-downloads">
+          <article class="download-option">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 4.5 10.5 3v8H2zm9.5-1.6L22 1.4V11H11.5zM2 12h8.5v8L2 18.5zm9.5 0H22v9.6l-10.5-1.5z"/></svg></span>
+            <div><h4>Windows</h4><p>x64 и ARM64</p></div>
+            <a class="action" id="windows-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.1/KifuClip.1.0.1.exe">Скачать EXE</a>
+          </article>
+          <article class="download-option">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16.7 1c.1 1.3-.4 2.6-1.2 3.5-.9 1-2.1 1.6-3.3 1.5-.2-1.2.4-2.5 1.2-3.4C14.3 1.6 15.6 1 16.7 1zM20.5 17.2c-.5 1.2-.8 1.8-1.5 2.8-1 1.4-2.3 3.1-4 3.1-1.4 0-1.8-.9-3.7-.9s-2.3.9-3.7.9c-1.6 0-2.9-1.5-3.9-2.9C1 16.3.5 10.9 2.2 8.3c1.2-1.8 3-2.8 4.8-2.8 1.5 0 2.4.9 3.7.9 1.2 0 2-.9 3.7-.9 1.5 0 3.1.8 4.3 2.1-3.8 2.1-3.2 7.6 1.8 9.6z"/></svg></span>
+            <div><h4>macOS</h4></div>
+            <a class="action" id="macos-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.1/KifuClip.1.0.1.pkg">Скачать PKG</a>
+          </article>
+        </div>
+        <p class="notice">Установщики для Windows и macOS пока не подписаны сертификатом издателя.</p>
+      </section>
+
+      <section class="download-group" aria-labelledby="android-downloads-heading">
+        <h3 id="android-downloads-heading">Для Android</h3>
+        <article class="download-option download-apk">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.2 7.7h11.6a1 1 0 0 1 1 1v8.5a1 1 0 0 1-1 1h-1.3V21a1 1 0 0 1-2 0v-2.8h-5V21a1 1 0 0 1-2 0v-2.8H6.2a1 1 0 0 1-1-1V8.7a1 1 0 0 1 1-1m-3 1a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1m17.6 0a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-6a1 1 0 0 1 1-1M6 6.8a6.3 6.3 0 0 1 2.3-3.6L7.2 1.4l.8-.5 1.2 1.8a7.3 7.3 0 0 1 5.6 0L16 .9l.8.5-1.1 1.8A6.3 6.3 0 0 1 18 6.8zm3.2-2.2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6m5.6 0a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6"/></svg></span>
+          <div><h4>Прямая загрузка</h4><p>Подписанный APK для установки вручную</p></div>
+          <a class="action" id="android-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.1/KifuClip.1.0.1.apk">Скачать APK</a>
+        </article>
+        <div class="download-options store-downloads">
+          <article class="download-option">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16l1 4H3zm0 5h16v11H4zm3 3v5h4v-5zm6 0v5h4v-5z"/></svg></span>
+            <div><h4>RuStore</h4><p id="rustore-link">Скоро</p></div>
+          </article>
+          <article class="download-option">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3.5v17l8.5-8.5zm1.5-.7L14 11l3-3zm0 18.4L17 16l-3-3zm12.8-12.5L15 12l3.3 3.3 2.9-1.6a1.9 1.9 0 0 0 0-3.4z"/></svg></span>
+            <div><h4>Google Play</h4><p>Скоро</p></div>
+          </article>
+          <article class="download-option">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm4 4H7a5 5 0 0 0 10 0h-2a3 3 0 0 1-6 0z"/></svg></span>
+            <div><h4>AppGallery</h4><p>Скоро</p></div>
+          </article>
+        </div>
+      </section>
+    </section>
     <section id="features" class="wrap" aria-labelledby="features-heading">
       <h2 id="features-heading">Возможности KifuClip</h2>
       <div class="feature-cards">
