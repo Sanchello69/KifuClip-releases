@@ -38,6 +38,12 @@
     .download-option{display:flex;align-items:center;gap:10px;min-width:0;padding:12px;border:1px solid #e9e3dd;border-radius:14px;background:#fff}
     .download-option>div{min-width:0;overflow-wrap:anywhere}
     .download-option h4{margin:0;font-size:16px;letter-spacing:-.02em}.download-option p{margin:0;color:#625e65;font-size:13px}
+    .store-link{background:#fff8f8;border-color:#e5c4c8;text-decoration:none}
+    .store-link:hover,.store-link:focus-visible{background:#f7ebeb;border-color:#b92332}
+    .store-link:focus-visible{outline:2px solid #b92332;outline-offset:3px}
+    .store-link p,.store-link-arrow{color:#a51d2a;font-weight:700}
+    .store-link p{line-height:1.25}
+    .store-link-arrow{margin-left:auto;flex-shrink:0;font-size:19px;line-height:1}
     .download-apk{margin-top:12px;padding:14px;border-color:#e5c4c8}
     .icon{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:10px;background:#f7ebeb;color:#ad2330}.icon svg{width:20px;height:20px;fill:currentColor}
     .action{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-height:44px;margin-left:auto;padding:8px 11px;border:1px solid #e5c4c8;border-radius:9px;background:#fff;color:#a51d2a;text-decoration:none;font-weight:750;font-size:13px;text-align:center}
@@ -51,7 +57,7 @@
     footer{border-top:1px solid #e7e1d9;padding:30px 0 46px;color:#77737a;font-size:13px}footer .wrap{display:flex;justify-content:space-between;gap:20px}footer a{text-decoration:none;color:#a81f2c}
     @media(max-width:800px){.hero{padding:58px 0 50px;grid-template-columns:1fr}.feature-cards{grid-template-columns:1fr}.hero-art{display:none}nav{gap:13px;font-size:13px}}
     @media(max-width:640px) and (min-width:481px){.desktop-downloads .download-option{flex-wrap:wrap}.desktop-downloads .action{flex-basis:100%}}
-    @media(max-width:560px){.store-downloads{grid-template-columns:1fr}.store-downloads .download-option>div{display:flex;flex:1;align-items:center;justify-content:space-between;gap:10px}}
+    @media(max-width:560px){.store-downloads{grid-template-columns:1fr}.store-downloads article.download-option>div{display:flex;flex:1;align-items:center;justify-content:space-between;gap:10px}}
     @media(max-width:480px){.wrap{width:min(100% - 32px,1120px)}.top{min-height:68px}nav a:first-child{display:none}.notes,.card{padding:21px}footer .wrap{flex-direction:column}
       .desktop-downloads{grid-template-columns:1fr}.download-apk{flex-wrap:wrap}.download-apk .action{flex-basis:100%}
     }
@@ -91,10 +97,11 @@
           <a class="action" id="android-link" href="https://github.com/Sanchello69/KifuClip-releases/releases/download/v1.0.1/KifuClip.1.0.1.apk">Скачать APK</a>
         </article>
         <div class="download-options store-downloads">
-          <article class="download-option">
+          <a class="download-option store-link" id="rustore-link" href="https://www.rustore.ru/catalog/app/app.kifuclip.mobile" aria-label="Открыть KifuClip в RuStore">
             <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16l1 4H3zm0 5h16v11H4zm3 3v5h4v-5zm6 0v5h4v-5z"/></svg></span>
-            <div><h4>RuStore</h4><a class="action" id="rustore-link" href="https://www.rustore.ru/catalog/app/app.kifuclip.mobile" aria-label="Открыть KifuClip в RuStore">Открыть</a></div>
-          </article>
+            <div><h4>RuStore</h4><p>Открыть</p></div>
+            <span class="store-link-arrow" aria-hidden="true">↗</span>
+          </a>
           <article class="download-option">
             <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3.5v17l8.5-8.5zm1.5-.7L14 11l3-3zm0 18.4L17 16l-3-3zm12.8-12.5L15 12l3.3 3.3 2.9-1.6a1.9 1.9 0 0 0 0-3.4z"/></svg></span>
             <div><h4>Google Play</h4><p>Скоро</p></div>
